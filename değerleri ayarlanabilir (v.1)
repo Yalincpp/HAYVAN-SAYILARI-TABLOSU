@@ -1,0 +1,35 @@
+#include <iostream>
+#include <string>
+
+using namespace std;
+
+void hayvanSatiriYazdir(string hayvanAdi, int hayvanPopularitesi);
+
+int main ()
+{
+    int kedi=0;
+    int kopek=0;
+    int kus=0;
+    int tavsan=0;
+
+    cout << "SIRASIYLA KEDİ, KÖPEK, KUŞ VE TAVŞANIN POPÜLERİTESİNİ GİRİNİZ:" << endl;
+    cin >> kedi >> kopek >> kus >> tavsan;
+
+    cout << " EN SEVİLEN HAYVANLAR" << endl;
+    hayvanSatiriYazdir("KEDİ   ", kedi);
+    hayvanSatiriYazdir("KÖPEK  ", kopek);
+    hayvanSatiriYazdir("KUŞ    ", kus);
+    hayvanSatiriYazdir("TAVŞAN ", tavsan);
+    return 0;
+}
+
+void hayvanSatiriYazdir(string hayvanAdi, int hayvanPopularitesi)
+{
+    cout << hayvanAdi;
+    for(int i = 0; i < hayvanPopularitesi ; i++)
+    {
+        cout << "-";
+    }
+    cout << endl;
+
+}
